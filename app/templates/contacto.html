@@ -1,0 +1,10 @@
+{% extends './layout.html' %}
+
+{% block title%} {{ data.titulo }} {% endblock %}
+
+{% block body %}
+    <h1> {{ data.nombre }} </h1>
+    {% if data.edad > 0 %}
+        <h2> {{ data.edad }} </h2>
+    {% endif %}    
+{% endblock %}

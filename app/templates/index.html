@@ -1,0 +1,42 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ data.titulo }}</title>
+</head>
+<body>
+    <h1>Chucha's Personal Page</h1>
+    <h2>{{ data.bienvenida }}</h2>
+    <h3>Mi familia!</h3>
+    {% if data.familiares > 0 %}
+    <ul>
+        {% for c in data.familia %}
+        <li> {{ c }}</li>
+        {% endfor %}
+    </ul>
+    {% else %}
+        <h2>Hay que salir a ayudar a un amigo peludo!</h2>
+    {% endif %}
+</body>
+</html> -->
+
+{% extends './layout.html' %}
+
+{% block title%} {{ data.titulo }} {% endblock %}
+
+{% block body %}
+    <h1>Chucha's Personal Page</h1>
+    <h2>{{ data.bienvenida }}</h2>
+    <h3>Mi familia!</h3>
+    {% if data.familiares > 0 %}
+    <ul>
+        {% for c in data.familia %}
+        <li> {{ c }}</li>
+        {% endfor %}
+    </ul>
+    {% else %}
+        <h2>Hay que salir a ayudar a un amigo peludo!</h2>
+    {% endif %}
+{% endblock %}
